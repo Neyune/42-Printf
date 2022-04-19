@@ -6,13 +6,13 @@
 /*   By: ereali <ereali@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 21:06:21 by ereali            #+#    #+#             */
-/*   Updated: 2020/01/31 21:06:24 by ereali           ###   ########.fr       */
+/*   Updated: 2022/04/19 23:39:12 by ereali           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-long long			handle_lh(t_data *data, t_flag_data *flag_data)
+long long	handle_lh(t_data *data, t_flag_data *flag_data)
 {
 	long long	i;
 

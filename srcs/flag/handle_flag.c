@@ -6,7 +6,7 @@
 /*   By: ereali <ereali@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 21:07:46 by ereali            #+#    #+#             */
-/*   Updated: 2020/01/31 21:07:48 by ereali           ###   ########.fr       */
+/*   Updated: 2022/04/19 23:38:49 by ereali           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	create_flag_funct_tab(t_flag_funct *tab)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (i < 128)

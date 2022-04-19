@@ -6,13 +6,13 @@
 /*   By: ereali <ereali@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 21:05:39 by ereali            #+#    #+#             */
-/*   Updated: 2020/02/05 17:13:20 by ereali           ###   ########.fr       */
+/*   Updated: 2022/04/19 23:39:45 by ereali           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-long long				converter_d_annexe(t_flag_data *flag_data, long long i,
+long long	converter_d_annexe(t_flag_data *flag_data, long long i,
 							char **str, BOOL *neg)
 {
 	if (i < 0)
@@ -28,16 +28,16 @@ long long				converter_d_annexe(t_flag_data *flag_data, long long i,
 	return (i);
 }
 
-void					converter_d_annexe2(t_flag_data *flag_data, BOOL neg)
+void	converter_d_annexe2(t_flag_data *flag_data, BOOL neg)
 {
 	if (flag_data->point == TRUE && flag_data->precision >= 0)
 		flag_data->zero = FALSE;
-	if (flag_data->zero == TRUE && (flag_data->plus == TRUE ||
-			flag_data->space == TRUE || neg == TRUE))
+	if (flag_data->zero == TRUE && (flag_data->plus == TRUE
+			|| flag_data->space == TRUE || neg == TRUE))
 		flag_data->padding--;
 }
 
-void					converter_d(t_data *data, t_flag_data *flag_data)
+void	converter_d(t_data *data, t_flag_data *flag_data)
 {
 	long long	i;
 	BOOL		neg;
@@ -63,7 +63,7 @@ void					converter_d(t_data *data, t_flag_data *flag_data)
 	free(str);
 }
 
-void					converter_c(t_data *data, t_flag_data *flag_data)
+void	converter_c(t_data *data, t_flag_data *flag_data)
 {
 	char	c;
 	char	*str;
@@ -91,7 +91,7 @@ void					converter_c(t_data *data, t_flag_data *flag_data)
 	}
 }
 
-void					converter_i(t_data *data, t_flag_data *flag_data)
+void	converter_i(t_data *data, t_flag_data *flag_data)
 {
 	converter_d(data, flag_data);
 }

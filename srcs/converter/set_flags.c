@@ -6,13 +6,13 @@
 /*   By: ereali <ereali@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 21:06:35 by ereali            #+#    #+#             */
-/*   Updated: 2020/02/05 16:46:12 by ereali           ###   ########.fr       */
+/*   Updated: 2022/04/19 23:38:29 by ereali           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void		handle_wildcard(t_data *data, t_flag_data *flag_data)
+void	handle_wildcard(t_data *data, t_flag_data *flag_data)
 {
 	int	j;
 
@@ -35,7 +35,7 @@ void		handle_wildcard(t_data *data, t_flag_data *flag_data)
 	}
 }
 
-void		handle_padding(t_flag_data *flag_data, char **str2)
+void	handle_padding(t_flag_data *flag_data, char **str2)
 {
 	char	*s2;
 
@@ -49,7 +49,7 @@ void		handle_padding(t_flag_data *flag_data, char **str2)
 	free(s2);
 }
 
-void		handle_padding_c(t_flag_data *flag_data, char **str2)
+void	handle_padding_c(t_flag_data *flag_data, char **str2)
 {
 	char	*s2;
 
@@ -63,7 +63,7 @@ void		handle_padding_c(t_flag_data *flag_data, char **str2)
 	free(s2);
 }
 
-void		handle_precision(t_flag_data *flag_data, char **str)
+void	handle_precision(t_flag_data *flag_data, char **str)
 {
 	char	*s2;
 
@@ -75,14 +75,14 @@ void		handle_precision(t_flag_data *flag_data, char **str)
 	}
 }
 
-void		handle_padding_num(t_flag_data *flag_data, char **str2)
+void	handle_padding_num(t_flag_data *flag_data, char **str2)
 {
 	char	*s2;
 
 	if (flag_data->padding <= (int)(ft_strlen(*str2)))
 		return ;
-	if (flag_data->zero == TRUE && flag_data->minus == FALSE &&
-		(flag_data->point == FALSE || flag_data->precision < 0))
+	if (flag_data->zero == TRUE && flag_data->minus == FALSE
+		&& (flag_data->point == FALSE || flag_data->precision < 0))
 	{
 		s2 = ft_strnew_c(flag_data->padding - (int)(ft_strlen(*str2)), '0');
 		ft_str_replace_front(s2, str2);

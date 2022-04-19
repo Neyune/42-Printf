@@ -6,7 +6,7 @@
 /*   By: ereali <ereali@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 21:00:42 by ereali            #+#    #+#             */
-/*   Updated: 2020/02/05 17:10:59 by ereali           ###   ########.fr       */
+/*   Updated: 2022/04/19 23:43:53 by ereali           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 
 # define PRINTF_BUFFER_SIZE 400
 
-typedef struct		s_data
+typedef struct s_data
 {
 	va_list		arg;
 	int			len;
@@ -41,7 +41,7 @@ void				add_char_to_buffer(t_data *data, char c);
 void				add_str_to_buffer(t_data *data, char *str);
 void				add_nb_char_to_buffer(t_data *data, char c, size_t nb);
 
-typedef struct		s_flag_data
+typedef struct s_flag_data
 {
 	BOOL	sharp;
 	BOOL	zero;
@@ -59,7 +59,7 @@ typedef struct		s_flag_data
 
 typedef size_t		(*t_flag_funct)(t_flag_data *data, char *cmd, int i);
 typedef void		(*t_convert_funct)(t_data *data, t_flag_data *flag_data);
-t_flag_data			create_flag_data();
+t_flag_data			create_flag_data(void);
 void				print_flag_data(t_flag_data *data);
 void				read_cmd(char *cmd, t_data *data);
 int					ft_printf(char *cmd, ...);
