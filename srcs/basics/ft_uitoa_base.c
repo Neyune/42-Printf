@@ -6,13 +6,13 @@
 /*   By: ereali <ereali@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 21:05:30 by ereali            #+#    #+#             */
-/*   Updated: 2020/01/31 21:05:33 by ereali           ###   ########.fr       */
+/*   Updated: 2022/04/19 23:23:51 by ereali           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int		unbr_len(unsigned long long n, int base)
+int	unbr_len(unsigned long long n, int base)
 {
 	unsigned int	len;
 

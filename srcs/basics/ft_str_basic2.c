@@ -6,7 +6,7 @@
 /*   By: ereali <ereali@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 21:02:43 by ereali            #+#    #+#             */
-/*   Updated: 2020/01/31 21:02:47 by ereali           ###   ########.fr       */
+/*   Updated: 2022/04/19 23:24:12 by ereali           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ size_t	ft_strlen(char *str)
 	return (result);
 }
 
-int		ft_strcmp(const char *s1, const char *s2)
+int	ft_strcmp(const char *s1, const char *s2)
 {
 	unsigned int	i;
 
@@ -34,7 +34,7 @@ int		ft_strcmp(const char *s1, const char *s2)
 	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
 
-int		ft_strchr(const char *s1, char c)
+int	ft_strchr(const char *s1, char c)
 {
 	unsigned int	i;
 

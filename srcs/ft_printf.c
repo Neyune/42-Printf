@@ -6,7 +6,7 @@
 /*   By: ereali <ereali@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 21:07:55 by ereali            #+#    #+#             */
-/*   Updated: 2020/01/31 21:07:57 by ereali           ###   ########.fr       */
+/*   Updated: 2022/04/19 23:19:51 by ereali           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	read_cmd(char *cmd, t_data *data)
 	}
 }
 
-int		ft_printf(char *cmd, ...)
+int	ft_printf(char *cmd, ...)
 {
 	t_data	data;
 
@@ -47,7 +47,7 @@ int		ft_printf(char *cmd, ...)
 	return (data.len);
 }
 
-int		ft_sprintf(char *s_buffer, char *cmd, ...)
+int	ft_sprintf(char *s_buffer, char *cmd, ...)
 {
 	t_data	data;
 
@@ -61,7 +61,7 @@ int		ft_sprintf(char *s_buffer, char *cmd, ...)
 	return (data.len);
 }
 
-int		ft_fprintf(int fd, char *cmd, ...)
+int	ft_fprintf(int fd, char *cmd, ...)
 {
 	t_data	data;
 
